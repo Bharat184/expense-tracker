@@ -1,0 +1,67 @@
+.formContainer{
+    padding: 8px;
+    border-radius: 8px;
+    background: #7FB3D5;
+}
+.formBox{
+    display: inline-block;
+    width: 45%;
+    margin-bottom: 10px;
+}
+.formBox label{
+    display: block;
+    margin:4px 0px;
+    font-size: 20px;
+}
+.formBox input{
+    display: block;
+    margin:4px 0px;
+    width: 90%;
+    padding: 6px;
+    font-size: 20px;
+}
+input[type="submit"],input[type="button"]
+{
+    display: inline-block;
+    width: 20%;
+    font-size: 19px;
+    font-weight: bolder;
+    padding:4px;
+    margin-top: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+
+}
+.main_btn{
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bolder;
+    display: block;
+    width: 20%;
+    margin:auto;
+    cursor: pointer;
+    border-radius: 8px;
+    border-width: 1px;
+}
+input[type="submit"]:hover,input[type="button"]:hover{
+    opacity: 0.9;
+}
+
+@media screen and (max-width:700px)
+{
+    .formBox{
+        display: block;
+        width: 90%;
+    }
+    input[type="submit"],input[type="button"]
+    {
+        width: 50%;
+    }
+    .formBox input{
+        width: 100%;
+    }
+    .main_btn{
+        width: 60%;
+    }
+}

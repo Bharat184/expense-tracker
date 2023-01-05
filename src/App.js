@@ -1,25 +1,61 @@
-import logo from './logo.svg';
 import './App.css';
+import {useState,useEffect} from 'react';
 
+import ExpenseForm from './Form/AddExpense';
+import ExpenseBox from './Expenses/ExpenseBox';
 function App() {
+
+  
+
+
+ 
+
+ 
+  const [data,setData]=useState([]);
+
+  
+ 
+
+ function addExpense(obj)
+ {
+  obj={id:Math.random().toString(),...obj};
+  let arr=data;
+  arr=[...arr,obj];
+  setData([...arr]);
+  localStorage.setItem('item',JSON.stringify(arr));
+ }
+
+ function deleteExpense(id)
+ {
+  let flag=window.confirm("Are you sure you want to remove?");
+  if(flag)
+  {
+    let arr=data;
+    arr=arr.filter((e)=>e.id!==id);
+    localStorage.setItem('item',JSON.stringify(arr));
+    setData([...arr]);
+  }
+ }
+
+  useEffect(()=>{
+    let item=localStorage.getItem('item');
+   
+    if(item!==null)
+    {
+      item=JSON.parse(item);
+      setData([...item]);
+    }
+  
+  },[])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className='xyz'>
+        <ExpenseForm  addExpense={addExpense} />
+        <ExpenseBox dataArr={data}  deleteExpense={deleteExpense} />
+      </div>
+    </>
   );
+
 }
 
 export default App;
