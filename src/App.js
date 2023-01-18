@@ -1,59 +1,25 @@
 import './App.css';
-import {useState,useEffect} from 'react';
+import React from 'react';
 
+import AuthForm from './Form/AuthForm'
 import ExpenseForm from './Form/AddExpense';
 import ExpenseBox from './Expenses/ExpenseBox';
+import {ExpenseContext} from "./Context/Context";
+import Alert from './Alert/Alert';
+import Loading from './Alert/Loading';
+
 function App() {
-
-  
-
-
  
-
- 
-  const [data,setData]=useState([]);
-
-  
- 
-
- function addExpense(obj)
- {
-  obj={id:Math.random().toString(),...obj};
-  let arr=data;
-  arr=[...arr,obj];
-  setData([...arr]);
-  localStorage.setItem('item',JSON.stringify(arr));
- }
-
- function deleteExpense(id)
- {
-  let flag=window.confirm("Are you sure you want to remove?");
-  if(flag)
-  {
-    let arr=data;
-    arr=arr.filter((e)=>e.id!==id);
-    localStorage.setItem('item',JSON.stringify(arr));
-    setData([...arr]);
-  }
- }
-
-  useEffect(()=>{
-    let item=localStorage.getItem('item');
-   
-    if(item!==null)
-    {
-      item=JSON.parse(item);
-      setData([...item]);
-    }
-  
-  },[])
   return (
-    <>
+    <ExpenseContext>
       <div className='xyz'>
-        <ExpenseForm  addExpense={addExpense} />
-        <ExpenseBox dataArr={data}  deleteExpense={deleteExpense} />
+        <Alert />
+        <Loading />
+        <AuthForm />
+        <ExpenseForm   />
+        <ExpenseBox  />
       </div>
-    </>
+    </ExpenseContext>
   );
 
 }

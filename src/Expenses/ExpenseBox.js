@@ -1,12 +1,13 @@
 import styles from "./ExpenseBox.module.css";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useContext } from "react";
 import ExpenseList from "./ExpenseList";
 import BarChart from "../Chart/BarChart";
+import Context from "../Context/Context";
 
 const ExpenseBox = (props) => {
   
     const yearRef=useRef();
-    const {dataArr,deleteExpense}=props;
+    const {data:dataArr,deleteExpense,loggedIn}=useContext(Context);
    
     const [year,setYear]=useState("all");
     const [filterArr,setFilterArr]=useState([]);
@@ -64,7 +65,9 @@ const ExpenseBox = (props) => {
         </select>
       </div>
         <BarChart data={filterArr}  />
-        {filterArr.length===0 && <h1>No expense added.</h1>}
+        {filterArr.length===0 && loggedIn ?(<h1>No expense added.</h1>):""}
+        {!loggedIn && <h1>Login/signup to continue</h1>}
+        
         {
           
           filterArr.length>0 && filterArr.map((e,i)=>{

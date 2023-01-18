@@ -1,7 +1,8 @@
 .formContainer{
     padding: 8px;
     border-radius: 8px;
-    background: #7FB3D5;
+    background: #58829c;
+    margin:20px 0px;
 }
 .formBox{
     display: inline-block;
@@ -38,17 +39,27 @@ input[type="submit"],input[type="button"]
     font-size: 20px;
     font-weight: bolder;
     display: block;
-    width: 20%;
     margin:auto;
     cursor: pointer;
     border-radius: 8px;
     border-width: 1px;
+    white-space: nowrap;
+}
+.btn_box{
+    display: flex;
+    justify-content: space-around;
+    gap:8px;
+}
+.img_box{
+    position: relative;
+    display: inline-block;
+    width: 20%;
 }
 input[type="submit"]:hover,input[type="button"]:hover{
     opacity: 0.9;
 }
 
-@media screen and (max-width:700px)
+@media screen and (max-width:860px)
 {
     .formBox{
         display: block;

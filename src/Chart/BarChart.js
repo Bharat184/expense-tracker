@@ -34,7 +34,7 @@ const BarChart=(props)=>{
             <span className={styles["detail-btn"]} onClick={()=>{setToggle(!toggle)}}></span>
            {toggle && ( <div className={styles["detail-box"]}>
                 {price.map((e,i)=>{
-                    return (<div><b>{months[i]}</b>&nbsp;&nbsp;&nbsp; <p>&#8377;{e}</p></div>);
+                    return (<div key={i}><b>{months[i]}</b>&nbsp;&nbsp;&nbsp; <p>&#8377;{e}</p></div>);
                 })}
            </div>)}
            {perctange.map((e,i)=>{

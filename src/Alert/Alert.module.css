@@ -1,0 +1,29 @@
+.alert {
+    padding: 8px;
+    background-color: #144272;
+    color: rgb(255, 251, 251);
+    margin-bottom: 4px;
+    position: relative;
+  }
+/* .closebtn{
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top:0px;
+    height: 100%;
+    width: 20px;
+    right:5%;
+    cursor: pointer;
+}
+.closebtn::before{
+    content: "\2613";
+    position: absolute;
+    inset:0;
+    font-size: 24px;
+    font-weight: bolder;
+} */
+  
+ 
+  
+
+  

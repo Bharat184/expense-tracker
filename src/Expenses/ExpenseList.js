@@ -6,7 +6,7 @@ const ExpenseList = (props) => {
 
     return (
         <div className={styles.expense_list}>
-            <span className={styles.delete_btn} onClick={()=>{deleteExpense(props.data.id)}}></span>
+            <span className={styles.delete_btn} onClick={()=>{deleteExpense(props.data._id)}}></span>
             <div className={styles.left_side}>
             <div className={styles.date_time}>
                 <p>{months[date.getMonth()]}</p>
