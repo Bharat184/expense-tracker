@@ -50,7 +50,7 @@ const SignupForm = (props) => {
             </div>
             <div>
                 <input type="submit" value="Signup" />
-                <input type="button" value="Cancel" onClick={() => { setToggle("") }} />
+                <input type="button" value="Go back" onClick={() => { setToggle("") }} />
             </div>
         </form>
 

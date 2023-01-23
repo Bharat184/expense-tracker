@@ -2,7 +2,8 @@
     padding: 10px;
     border-radius: 10px;
     margin-top:20px;
-    background: #616164;
+    background: #030303;
+    color:white ;
 }
 .filter_date{
     display: flex;

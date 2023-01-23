@@ -1,8 +1,9 @@
 .formContainer{
     padding: 8px;
     border-radius: 8px;
-    background: #58829c;
+    background: #2A363B;
     margin:20px 0px;
+    color:white !important;
 }
 .formBox{
     display: inline-block;

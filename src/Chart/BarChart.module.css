@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-around;
     padding: 40px 10px;
-    background: white;
+    background: #333;
     border-radius: 8px;
     position: relative;
 }
@@ -11,7 +11,7 @@
     position: absolute;
     inset:0;
     z-index:1;
-    background-color: white;
+    background-color: #333;
     padding: 40px 10px;
     border-radius: 8px;
     display: flex;
@@ -24,7 +24,7 @@
 }
 .detail-box div p{
     font-weight: bolder;
-    color:red;
+    color:rgb(248, 246, 246);
     font-size: 20px;
 }
 .detail-btn{

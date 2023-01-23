@@ -57,7 +57,7 @@ const AddExpense=(props)=>{
             <input type="submit" value="Add expense" />
             <input type="button" value="Cancel" onClick={()=>{setToggle((t)=>!t)}}/>
             </div>
-        </form>):(<button className={styles.main_btn} onClick={()=>{setToggle((t)=>!t)}}>Add expense</button>)}</>):<h1>Login/signup to continue</h1>}
+        </form>):(<button className={styles.main_btn} onClick={()=>{setToggle((t)=>!t)}}>Add expense</button>)}</>):<h1>Login or Signup to continue</h1>}
         </div>
 
     );

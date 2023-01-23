@@ -43,7 +43,7 @@ const LoginForm = (props) => {
             </div>
             <div>
                 <div className={styles.img_box}><input type="submit" value="Login" style={{ width: "90%" }}  /></div>
-                <input type="button" value="Cancel" onClick={() => { setToggle("") }} />
+                <input type="button" value="Go back" onClick={() => { setToggle("") }} />
             </div>
         </form>
 

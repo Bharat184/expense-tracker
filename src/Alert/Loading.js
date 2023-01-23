@@ -8,9 +8,9 @@ function Loading() {
   return (
     <>
         {loading?(<div className={styles.loading}>
-      <div className={styles.loadingImg}>
-        <img src={img} alt="Loading..." />
-      </div>
+      
+        <img src={img} alt="Loading..." className={styles.loadingImg}/>
+      
     </div>):""}
     </>
   );

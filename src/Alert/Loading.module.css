@@ -4,11 +4,19 @@
     background-color: black;
     opacity: 0.4;
     z-index: 10;
-}
-.loadingImg{
     display: grid;
     place-items: center;
+}
+.loadingImg{
+    height: 300px;
+    width: 300px;
     position: absolute;
-    inset:20%;
     z-index: 99;
+}
+
+@media screen and (max-width:800px) {
+    .loadingImg{
+        height: 200px;
+        width: 200px;
+    }
 }

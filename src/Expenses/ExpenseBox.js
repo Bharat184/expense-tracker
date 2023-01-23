@@ -66,7 +66,7 @@ const ExpenseBox = (props) => {
       </div>
         <BarChart data={filterArr}  />
         {filterArr.length===0 && loggedIn ?(<h1>No expense added.</h1>):""}
-        {!loggedIn && <h1>Login/signup to continue</h1>}
+        {!loggedIn && <h1>Login or Signup to continue</h1>}
         
         {
           
